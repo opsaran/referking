@@ -11,7 +11,7 @@ export const shopify = ShopifyExpress({
     apiKey: process.env.SHOPIFY_API_KEY,
     apiSecretKey: process.env.SHOPIFY_API_SECRET,
     scopes: ['read_customers', 'read_orders', 'write_discounts'],
-    hostName: process.env.HOST.replace(/https?:\\/\\//, ''),
+    hostName: process.env.HOST.replace(/^https?:\/\//, ''),
     apiVersion: LATEST_API_VERSION,
     isEmbeddedApp: true,
   }),
